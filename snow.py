@@ -51,7 +51,7 @@ def snowfall(max_x, max_y):
             left_ground = ground[x - 1] if x > 0 else ground[x]  # Use the current pile for the first column
             right_ground = ground[x + 1] if x < max_x - 1 else ground[x]  # Use the current pile for the last column
             average_ground = (left_ground + ground[x] + right_ground) // 3
-            if ground[x] > average_ground + 1:  # If this pile is significantly higher than its neighbors
+            if ground[x] > average_ground + 1:  # If this pile is significantly higher than its neighbours
                 ground[x] -= 1  # Move some snow from this pile
                 if left_ground < ground[x]:  # Move the snow to the lower neighbor
                     if x > 0:  # Avoid modifying the first column
